@@ -18,3 +18,10 @@ class ContactAdmin(admin.ModelAdmin):
     list_editable = 'first_name', 'last_name',
     # campos que voce clica e vai para a area de atualizar contato
     list_display_links = 'id','phone',
+
+@admin.register(models.Category)
+class CategoryAdmin(admin.ModelAdmin):
+    # essa list_display deixa a tabela no django admin organizada por cada coluna  
+    list_display = 'name'
+    # ordenado por
+    ordering = 'id',
