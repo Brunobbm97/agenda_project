@@ -5,7 +5,7 @@ from contact import models
 @admin.register(models.Contact)
 class ContactAdmin(admin.ModelAdmin):
     # essa list_display deixa a tabela no django admin organizada por cada coluna  
-    list_display = 'id','first_name','last_name','phone'
+    list_display = 'id', 'first_name', 'last_name', 'phone',
     # ordenado por
     ordering = 'id',
     # exibir ordem de data de criacao
@@ -22,6 +22,6 @@ class ContactAdmin(admin.ModelAdmin):
 @admin.register(models.Category)
 class CategoryAdmin(admin.ModelAdmin):
     # essa list_display deixa a tabela no django admin organizada por cada coluna  
-    list_display = 'name'
+    list_display = 'name',
     # ordenado por
     ordering = 'id',
