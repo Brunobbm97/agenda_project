@@ -1,0 +1,21 @@
+{% extends 'global/base.html' %}
+
+{% block content %}
+<div class="form-wrapper">
+    <h2>Contact</h2>
+
+    <form action="{% url 'contact:create' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <!--os dados do formulario que estamos postando dentro da view são de fato do formulario-->
+        <div class="form-content">
+            {% for field in form %}
+            <div class="form-group">
+                <label for="id_first_name">LABEL</label>
+                <input type="text" name="first_name" maxlength="255" id="id_first_name">
+            </div>
+
+            {% endfor %}
+        </div>
+    </form>
+</div>
+{% endblock content%}
